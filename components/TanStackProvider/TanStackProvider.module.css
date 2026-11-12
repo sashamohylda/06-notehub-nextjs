@@ -1,0 +1,2 @@
+/* TanStackProvider не рендерить власної розмітки — лише обгортає застосунок у QueryClientProvider.
+   Файл стилів додано, щоб структура папки відповідала вимогам: Component.tsx + Component.module.css. */

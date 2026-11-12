@@ -4,8 +4,8 @@ import {
   QueryClient,
 } from '@tanstack/react-query';
 import { fetchNoteById } from '@/lib/api';
-import NoteDetailsClient from '../NoteDetails.client';
-import css from '../NoteDetails.module.css';
+import NoteDetailsClient from './NoteDetails.client';
+import css from './NoteDetails.module.css';
 
 export default async function NoteDetails({
   params,

@@ -5,6 +5,8 @@ import type { FormikHelpers } from 'formik';
 import * as Yup from 'yup';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { createNote } from '@/lib/api';
+// Інша назва при імпорті, бо ErrorMessage вже імпортовано з formik
+import RequestErrorMessage from '@/components/ErrorMessage/ErrorMessage';
 import type { NewNote, NoteTag } from '@/types/note';
 import css from './NoteForm.module.css';
 
@@ -86,7 +88,7 @@ export default function NoteForm({ onClose }: NoteFormProps) {
         </div>
 
         {createMutation.isError && (
-          <p className={css.error}>Failed to create note. Try again.</p>
+          <RequestErrorMessage message="Failed to create note. Try again." />
         )}
 
         <div className={css.actions}>
