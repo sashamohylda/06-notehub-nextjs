@@ -9,7 +9,11 @@ export const metadata: Metadata = {
   description: 'NoteHub — a simple app for managing personal notes',
 };
 
-export default function RootLayout({ children }: LayoutProps<'/'>) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en">
       <body>

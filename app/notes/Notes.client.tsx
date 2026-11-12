@@ -37,6 +37,8 @@ export default function NotesClient() {
     queryKey: ['notes', page, search],
     queryFn: () => fetchNotes({ page, perPage: NOTES_PER_PAGE, search }),
     placeholderData: keepPreviousData,
+    // Першу сторінку вже отримано на сервері — не повторюємо запит при монтуванні
+    refetchOnMount: false,
     // Помилку отримує app/notes/error.tsx
     throwOnError: true,
   });
